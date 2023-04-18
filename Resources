@@ -1,3 +1,3 @@
  Write Simple Ansible Playbook - https://www.youtube.com/watch?v=BeYUQaFS-vg
- 
+ Command line to see nginx install or not - < ps -ef | grep nginx>
  
