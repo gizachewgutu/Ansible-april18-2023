@@ -1,3 +1,6 @@
  Write Simple Ansible Playbook - https://www.youtube.com/watch?v=BeYUQaFS-vg
  Command line to see nginx install or not - < ps -ef | grep nginx>
+ <sudo apt-get install software-properties-common>  ----"manage the repositories that you install software from (common) This software provides an abstraction of the used apt repositories. 
+ It allows you to easily manage your distribution and independent software vendor software sources. . 
+ This package contains the common files for software-properties like the D-Bus backend."
  
