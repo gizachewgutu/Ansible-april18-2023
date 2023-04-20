@@ -4,3 +4,44 @@
  It allows you to easily manage your distribution and independent software vendor software sources. . 
  This package contains the common files for software-properties like the D-Bus backend."
  
+  clear
+    2  apt update
+    3  python3 --version
+    4  apt install software-properties-common
+    5  apt-add-repository --yes --update ppa:ansible/ansible
+    6  apt update
+    7  apt install ansible
+    8  ansible --version
+    
+    9  cd /etc/ansible
+   10  ls -la
+   11  cat hosts
+   12  vi hosts
+   13  cat hosts
+   14  ansible -m ping host1
+   15  ansible -m ping host2
+   16  ansible -m ping Dev
+   17  cd ~
+   18  ls -la
+   19  cd .ssh
+   20  ls -l
+   21  cat authorized_keys
+   22  ssh-keygen
+   23  ls -l
+   24  cat id_rsa.pub
+   28  cat hosts
+   29  cd ~
+   30  cd /etc/ansible
+   31  ls -l
+   32  vi hosts
+   33  cat hosts
+   34  ansible -m ping Dev
+   35  vi hosts
+   36  ansible -m ping Dev
+   37  cat hosts
+   38  vi first-playbook.yaml
+   39  ls -l
+   46  ansible-playbook first-playbook.yaml
+   47  
+
+ 
