@@ -14,20 +14,26 @@
     8  ansible --version
     
     9  cd /etc/ansible
-   10  ls -la
-   11  cat hosts
+   10  ls -l
    12  vi hosts
+[Dev]
+host1 ansible_ssh_host=<Ip address>
+host2 ansible_ssh_host=<Ip address>
    13  cat hosts
-   14  ansible -m ping host1
-   15  ansible -m ping host2
-   16  ansible -m ping Dev
+   you get this
+host1 ansible_ssh_host=<18.220.60.104>
+host2 ansible_ssh_host=<18.191.0.103>
+   14  ansible -m ping host1     excute or ping host 1 -one by one
+   15  ansible -m ping host2      to ping host2
+   16  ansible -m ping Dev         to ping in group
    17  cd ~
    18  ls -la
    19  cd .ssh
    20  ls -l
    21  cat authorized_keys
-   22  ssh-keygen
+   22  ssh-keygen    ---   to get key connect to the host
    23  ls -l
+ 
    24  cat id_rsa.pub
    28  cat hosts
    29  cd ~
@@ -40,8 +46,20 @@
    36  ansible -m ping Dev
    37  cat hosts
    38  vi first-playbook.yaml
+   copy this playbook yamle.com
+   
+ ---- hosts: host1
+  become: yes
+  tasks:
+    - name: install apache2
+      apt: name=apache2 update_cache=yes state=latest
+- hosts: host2
+  name: play 2
+  become: yes
+  tasks:
+    - name: Install nginx
+      apt: name=nginx state=latest
+      
    39  ls -l
-   46  ansible-playbook first-playbook.yaml
-   47  
-
- 
+   46  ansible-playbook first-playbook.yaml       to run
+   
